@@ -56,7 +56,7 @@ Enter Total sales <br>
 <input type="text" id="total"> <br> <br>
 Enter Ghana sales <br>
 
-<input type="text" id="gh"> <br> <br>
+<input type="text" id="gh"> <h5 id="gg"></h5> <br> <br>
 
 <button onClick="payment()"> Calculate </button>
 
@@ -83,6 +83,7 @@ if (x === 1){
   document.getElementById("result").innerHTML = total - (total*(15/100));}
  else {
     const r = (((total - gha) - ((total - gha) * (15/100))) + (gha - (gha *(20/100))));
+    document.getElementById("gg").innerHTML = (gha - (gha * (20/100)))
     document.getElementById("result").innerHTML = r;
  }
   
@@ -94,6 +95,8 @@ else if (x === 2){
   document.getElementById("result").innerHTML = total - (total*(17.5/100));}
  else {
     const r = (((total - gha) - ((total - gha) * (17.5/100))) + (gha - (gha *(22.5/100))));
+    
+    document.getElementById("gg").innerHTML = (gha - (gha * (22.5/100)))
     document.getElementById("result").innerHTML = r;
  }
   
