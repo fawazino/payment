@@ -53,10 +53,10 @@ Enter 3 for 10% <br>
 
 Enter Total sales <br>
 
-<input type="number" id="total" onfocus="this.value=''"> <br> <br>
+<input type="number" id="total" onfocus="myFunction(this)"> <br> <br>
 Enter Ghana sales <br>
 
-<input type="number" id="gh" onfocus="this.value=''"> <h5 id="gg"></h5> <br> <br>
+<input type="number" id="gh" onfocus="myFunction(this)"> <h5 id="gg"></h5> <br> <br>
 
 <button onClick="payment()"> Calculate </button>
 
@@ -65,12 +65,11 @@ Enter Ghana sales <br>
 </div>
 
 <script>
+  function myFunction(x) {
+  x.value = " ";
+}
 
 function payment() {
-    
-    
-    
-
     
 var x = parseInt(document.getElementById("selec").value);
 
